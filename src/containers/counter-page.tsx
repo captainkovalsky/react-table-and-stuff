@@ -9,7 +9,7 @@ interface ICounterPageProps extends React.Props<any> {
   counter: number;
   increaseCounter: () => void;
   decreaseCounter: () => void;
-};
+}
 
 function mapStateToProps(state) {
   return {
@@ -27,7 +27,7 @@ function mapDispatchToProps(dispatch) {
 class CounterPage extends React.Component<ICounterPageProps, void> {
   render() {
     const { counter, increaseCounter, decreaseCounter } = this.props;
- 
+
     return (
       <Container testid="counter" size={2} center>
       <h2
