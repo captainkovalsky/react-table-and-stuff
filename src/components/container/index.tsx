@@ -1,15 +1,17 @@
 import * as React from 'react';
 import * as classNames from 'classnames';
 
-interface IContainerProps extends React.Props<any> {
+interface IContainerProps extends React.Props<any>{
   size: number;
-  center: boolean;
+  left?, right?, center? : boolean;
   testid?: string;
 };
 
 export default function Container({
   size = 1,
   center = false,
+  left = false,
+  right = false,
   children = null,
   testid = ''
 }: IContainerProps) {
@@ -19,6 +21,8 @@ export default function Container({
     'max-width-3': size === 3,
     'max-width-4': size === 4,
     'mx-auto': center,
+    'left': left,
+    'right': right
   });
 
   return (
